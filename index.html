@@ -1,239 +1,298 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Engineering - Курсова работа</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Engineering – Курсова работа</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header class="site-header">
-    <div class="container header-inner">
-        <div class="brand">
-            <p class="eyebrow">Курсова работа по изкуствен интелект</p>
-            <h1>Prompt Engineering</h1>
-            <p class="subtitle">Как правилно зададеният въпрос води до по-добър AI отговор</p>
-            <p class="author">Алекс Корабова · Софтуерно инженерство · 3 курс</p>
-        </div>
-
-        <nav class="top-nav">
-            <a href="#intro">Увод</a>
-            <a href="#what">Prompt</a>
-            <a href="#how">Как работи AI</a>
-            <a href="#core">CORE</a>
-            <a href="#methods">Методи</a>
-            <a href="#examples">Примери</a>
-            <a href="#apps">Приложения</a>
-            <a href="#pros">Предимства</a>
-            <a href="#sources">Източници</a>
-        </nav>
-    </div>
+<div class="container header-inner">
+<div class="brand">
+<p class="eyebrow">Курсова работа по изкуствен интелект</p>
+<h1>Prompt Engineering</h1>
+<p class="subtitle">Как правилно зададеният въпрос води до по-добър AI отговор</p>
+<p class="author">Алекс Корабова, Софтуерно инженерство, 3 курс</p>
+</div>
+<div class="header-controls">
+<nav class="main-nav" aria-label="Основна навигация">
+<a href="#intro">Увод</a>
+<a href="#what">Какво е</a>
+<a href="#how">Как работят</a>
+<a href="#core">CORE</a>
+<a href="#methods">Методи</a>
+<a href="#compare">Добър/Слаб</a>
+<a href="#applications">Приложения</a>
+<a href="#advantages">Предимства</a>
+</nav>
+<button id="theme-toggle" class="theme-toggle" type="button">Тъмен режим</button>
+</div>
+</div>
 </header>
-
 <main class="container">
-
-<!-- HERO -->
-<section class="hero section">
-    <div class="hero-grid">
-        <div>
-            <h2>Как правилният prompt подобрява AI резултатите</h2>
-            <p>
-                Prompt engineering е ключово умение в работата с изкуствен интелект.
-                То определя как формулираме задачите към AI, за да получим по-точни, полезни и структурирани отговори.
-            </p>
-
-            <div class="hero-buttons">
-                <a class="btn primary" href="#intro">Започни</a>
-                <a class="btn secondary" href="#what">Научи повече</a>
-            </div>
-        </div>
-
-        <div class="hero-card">
-            <h3>Структура на проекта</h3>
-            <ul>
-                <li>Увод</li>
-                <li>Prompt Engineering</li>
-                <li>CORE рамка</li>
-                <li>Методи</li>
-                <li>Примери</li>
-            </ul>
-        </div>
-    </div>
+<section class="hero section-card">
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">Начална секция</p>
+<h2>Изкуственият интелект е силен, но добрите резултати започват с правилния prompt.</h2>
+<p>Prompt engineering е умението да се създават ясни, структурирани и приложими заявки към AI модели. С правилен prompt моделът разбира задачата по-добре, дава по-точни отговори и намалява нуждата от многократно коригиране.</p>
+<div class="hero-actions">
+<a class="button primary" href="#what">Научете повече</a>
+<a class="button secondary" href="#methods">Техники</a>
+</div>
+</div>
+<div class="hero-panel">
+<div class="hero-card">
+<h3>За проекта</h3>
+<p>Този сайт представя основни понятия, рамки, методи и примери за prompt engineering, насочени към курсова работа и практическо приложение.</p>
+<ul>
+<li>Увод и обхват</li>
+<li>Как работят AI моделите</li>
+<li>CORE framework</li>
+<li>Методи и сравнения</li>
+<li>Примери и източници</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-
-<!-- INTRO -->
-<section id="intro" class="card section">
-    <h2>Увод</h2>
-    <p>
-        Изкуственият интелект се използва все по-често в образование, бизнес и технологии.
-        Въпреки мощта на AI моделите, качеството на отговорите зависи от начина, по който задаваме въпросите.
-    </p>
-    <p>
-        Prompt engineering представлява процес на създаване на ясни и структурирани инструкции,
-        които помагат на AI да разбере задачата по-добре и да даде по-точен резултат.
-    </p>
+<section id="intro" class="section-card">
+<h2>Увод</h2>
+<p>Генеративният изкуствен интелект се развива експоненциално и вече се използва в множество сфери: образование, комуникации, бизнес, медицина и научни изследвания. Въпреки това, потенциалът на тези системи зависи не само от модела, но и от качеството на информацията, която им подаваме.</p>
+<p>Prompt engineering е дисциплина, която позволява на потребителите да пишат по-добри инструкции. Тези инструкции включват не само самия въпрос, но и контекст, ограничения, стил и очакван формат. По този начин AI може да даде отговор, който е по-тясно свързан с реалните нужди.</p>
+<p>За целите на тази курсова работа ще разгледаме какво представлява prompt engineering, как работят AI моделите, кои техники са най-ефективни и как да оценим разликата между слаб и добър prompt.</p>
 </section>
-
-<!-- WHAT -->
-<section id="what" class="card section">
-    <h2>Какво е Prompt Engineering</h2>
-    <p>
-        Prompt engineering е практиката да формулираме входни инструкции към AI системи по начин,
-        който максимизира качеството на изхода.
-    </p>
-
-    <div class="grid-2">
-        <div class="box bad">
-            <h3>Слаб prompt</h3>
-            <p>Разкажи ми за климатичните промени.</p>
-        </div>
-
-        <div class="box good">
-            <h3>Добър prompt</h3>
-            <p>Обясни причините за климатичните промени в 3 кратки абзаца за ученици.</p>
-        </div>
-    </div>
+<section id="what" class="section-card">
+<h2>Какво е Prompt Engineering</h2>
+<p>Prompt engineering е процес на систематично създаване, формулиране и оптимизиране на заявки към езикови AI модели. Това е метод, който превръща неясните потребителски намерения в точни указания, за да се постигне желаният резултат.</p>
+<p>В контекста на модерните AI платформи, prompt-ът може да съдържа:</p>
+<ul>
+<li>Описание на задачата</li>
+<li>Ролята на AI</li>
+<li>Формата на изхода</li>
+<li>Целева аудитория</li>
+<li>Ограничения и условия</li>
+</ul>
+<div class="example-box">
+<div>
+<h3>Прост prompt</h3>
+<p><em>Разкажи ми за климатичните промени.</em></p>
+<p>Този prompt дава малко контекст и позволява широки интерпретации.</p>
+</div>
+<div>
+<h3>Подобрен prompt</h3>
+<p><em>Обясни основните причини за климатичните промени в три кратки абзаца за ученици от 10-ти клас, използвайки ясен и непретенциозен тон.</em></p>
+<p>Този prompt определя стил, обем, аудитория и цел.</p>
+</div>
+</div>
 </section>
-
-<!-- HOW AI WORKS -->
-<section id="how" class="card section">
-    <h2>Как работят AI моделите</h2>
-    <p>
-        AI моделите не „мислят“ като хората. Те предсказват следващата дума в текста
-        въз основа на огромни масиви от данни.
-    </p>
-    <p>
-        Колкото по-ясен е prompt-ът, толкова по-точен и ограничен става отговорът.
-    </p>
+<section id="how" class="section-card">
+<h2>Как работят AI моделите</h2>
+<p>AI моделите, като GPT, не притежават собствено знание или съзнание. Те са статистически машини, които анализират големи масиви от текст и предсказват най-вероятното следващо продължение на входа.</p>
+<p>Тези модели работят чрез последователности от токени и използват вероятности, за да изберат следващите думи. Когато prompt-ът е неясен, моделът може да "попълни" празнините въз основа на най-често срещаната диагноза, а не според реалната нужда на потребителя.</p>
+<div class="quote-box">
+<p><strong>Пример:</strong> "София е столицата на..." – моделът генерира най-вероятния завършек, който е "България". Това е прогнозиране, а не логическо разсъждение.</p>
+</div>
+<table class="prompt-table">
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Пример</th>
+<th>Защо е важно</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Роля</td>
+<td>Act as an experienced teacher.</td>
+<td>Определя тона и стила на отговора.</td>
+</tr>
+<tr>
+<td>Задача</td>
+<td>Explain chain-of-thought prompting.</td>
+<td>Дава ясна цел за модела.</td>
+</tr>
+<tr>
+<td>Формат</td>
+<td>Use a short table and bullet points.</td>
+<td>Гарантира лесно четим резултат.</td>
+</tr>
+</tbody>
+</table>
+<p>Поради тази причина prompt engineering е важно: колкото по-ясен и точен е входът, толкова по-малък е шансът за неточни, двусмислени или измислени (hallucinated) отговори.</p>
 </section>
-
-<!-- CORE -->
-<section id="core" class="card section">
-    <h2>CORE рамка</h2>
-
-    <div class="grid-4">
-        <div class="mini-card">
-            <h3>Character</h3>
-            <p>Роля на AI (учител, експерт, анализатор)</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Objective</h3>
-            <p>Каква е целта на задачата</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Requirements</h3>
-            <p>Ограничения и условия</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Expression</h3>
-            <p>Формат на отговора</p>
-        </div>
-    </div>
+<section id="core" class="section-card">
+<h2>CORE framework</h2>
+<p>CORE framework е удобен инструмент за създаване на добре структуриран prompt. Той разделя инструкциите на четири основни етапа.</p>
+<div class="feature-grid">
+<article>
+<h3>Character</h3>
+<p>Кой трябва да бъде моделът? Например: "Act as an experienced data analyst."</p>
+</article>
+<article>
+<h3>Objective</h3>
+<p>Какъв резултат искате? Обобщение, предложение, анализ, списък и др.</p>
+</article>
+<article>
+<h3>Requirements</h3>
+<p>Какви са ограниченията? Аудитория, стил, дължина, тон и съдържание.</p>
+</article>
+<article>
+<h3>Expression</h3>
+<p>Как да бъде представен отговорът? Таблица, точки, параграфи, код.</p>
+</article>
+</div>
 </section>
-
-<!-- METHODS -->
-<section id="methods" class="card section">
-    <h2>Методи и техники</h2>
-
-    <ul>
-        <li><b>Zero-shot:</b> директна инструкция без примери</li>
-        <li><b>Few-shot:</b> използване на примери</li>
-        <li><b>Chain-of-thought:</b> стъпково разсъждение</li>
-        <li><b>Iterative prompting:</b> подобряване чрез повторение</li>
-    </ul>
+<section id="methods" class="section-card">
+<h2>Методи и техники</h2>
+<p>Съществуват няколко практики, които помагат да взаимодействаме по-добре с AI. Всяка техника предлага различен подход към формулирането на prompt-а и управлението на резултата.</p>
+<div class="info-grid">
+<div>
+<h3>Zero-shot prompting</h3>
+<p>Давате задача без примери. Полезно е за ясни, общи въпроси или когато искате бърз отговор.</p>
+</div>
+<div>
+<h3>Few-shot prompting</h3>
+<p>Предоставяте примери, за да зададете тон, структура и допълнителни условия.</p>
+</div>
+<div>
+<h3>Chain-of-thought</h3>
+<p>Моделът описва мисленето си стъпка по стъпка, което често води до по-точни изводи.</p>
+</div>
+<div>
+<h3>Conversational prompting</h3>
+<p>Работи в диалог: коригирате, уточнявате и подобрявате отговора в няколко стъпки.</p>
+</div>
+<div>
+<h3>Iterative prompting</h3>
+<p>Повтаряте и подобрявате prompt-а до получаване на желаното качество.</p>
+</div>
+</div>
 </section>
-
-<!-- EXAMPLES -->
-<section id="examples" class="card section">
-    <h2>Примери</h2>
-
-    <div class="box bad">
-        <h3>Слаб prompt</h3>
-        <p>Write something about AI in marketing.</p>
-    </div>
-
-    <div class="box good">
-        <h3>Добър prompt</h3>
-        <p>
-            Act as a marketing expert and create 5 LinkedIn post ideas about AI in marketing,
-            с кратко обяснение за всяка идея.
-        </p>
-    </div>
+<section id="compare" class="section-card">
+<h2>Добър срещу слаб prompt</h2>
+<p>Малките промени в формулировката на prompt-а могат да доведат до значително по-различни резултати. Един добър prompt има ясна структура, роля, формат и условие.</p>
+<div class="comparison-grid">
+<div>
+<h3>Слаб prompt</h3>
+<p>Write something about AI in marketing.</p>
+<p>Резултатът е обикновен, без конкретен стил и цел.</p>
+</div>
+<div>
+<h3>Добър prompt</h3>
+<p>Act as a marketing strategist. Generate five LinkedIn post ideas about prompt engineering for curious professionals, each with a one-sentence explanation.</p>
+<p>Този prompt дефинира роля, аудитория, тема и формат.</p>
+</div>
+</div>
 </section>
-
-<!-- APPLICATIONS -->
-<section id="apps" class="card section">
-    <h2>Приложения</h2>
-
-    <div class="grid-2">
-        <div class="mini-card">
-            <h3>Образование</h3>
-            <p>Обяснения, тестове, персонализирано обучение.</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Бизнес</h3>
-            <p>Маркетинг, анализи, текстове.</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Програмиране</h3>
-            <p>Код, debug, документация.</p>
-        </div>
-
-        <div class="mini-card">
-            <h3>Наука</h3>
-            <p>Анализи и обобщения.</p>
-        </div>
-    </div>
+<section id="applications" class="section-card">
+<h2>Примери и приложения</h2>
+<div class="feature-grid">
+<article>
+<h3>Образование</h3>
+<p>AI се използва за създаване на учебни материали, обяснения, тестове и персонализирани уроци.</p>
+</article>
+<article>
+<h3>Бизнес</h3>
+<p>Маркетингът и управлението на съдържанието работят по-добре с ясни prompt-ове за кампании, анализи и копирайт.</p>
+</article>
+<article>
+<h3>Програмиране</h3>
+<p>Ясните инструкции позволяват на AI да генерира код, коригира бъгове и да обяснява технически решения.</p>
+</article>
+<article>
+<h3>Научна и професионална работа</h3>
+<p>AI помага при обобщаването на статии, подготовката на доклади и обработката на големи масиви данни.</p>
+</article>
+</div>
 </section>
-
-<!-- PROS -->
-<section id="pros" class="card section">
-    <h2>Предимства и ограничения</h2>
-
-    <div class="grid-2">
-        <div>
-            <h3>Предимства</h3>
-            <ul>
-                <li>По-точни резултати</li>
-                <li>По-добър контрол</li>
-                <li>По-бърза работа</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Ограничения</h3>
-            <ul>
-                <li>Възможни грешки</li>
-                <li>Няма гаранция за точност</li>
-                <li>Изисква проверка</li>
-            </ul>
-        </div>
-    </div>
+<section id="advantages" class="section-card">
+<h2>Предимства и ограничения</h2>
+<div class="two-column">
+<div>
+<h3>Предимства</h3>
+<ul>
+<li>Повече точност и релевантност</li>
+<li>По-малко време за ревизии</li>
+<li>По-добър контрол над стила и формата</li>
+<li>Подобрено взаимодействие с AI</li>
+</ul>
+</div>
+<div>
+<h3>Ограничения</h3>
+<ul>
+<li>AI моделите все още могат да грешат</li>
+<li>Не съществува един универсален prompt</li>
+<li>Изисква човешка проверка и етична оценка</li>
+<li>Може да продължи пристрастия от обучителни данни</li>
+</ul>
+</div>
+</div>
 </section>
-
-<!-- SOURCES -->
-<section id="sources" class="card section">
-    <h2>Източници</h2>
-    <ul>
-        <li>OpenAI Documentation</li>
-        <li>Google AI Guidelines</li>
-        <li>Anthropic Docs</li>
-        <li>arXiv – Prompt Engineering papers</li>
-    </ul>
+<section id="conclusion" class="section-card">
+<h2>Заключение</h2>
+<p>Prompt engineering е ключова част от практическата работа с изкуствен интелект. Той превръща неясните въпроси в точни, приложими и полезни инструкции.</p>
+<p>Добре формулираните prompts не само подобряват AI резултатите, но и развиват умението за ясно мислене и ефективна комуникация.</p>
+<p>Когато разбираме как да изграждаме prompt-ове, можем да използваме AI като надежден партньор в учебни, научни и професионални задачи.</p>
 </section>
-
+<section id="sources" class="section-card">
+<h2>Реални използвани източници</h2>
+<ul class="sources-list">
+<li>OpenAI Documentation – Prompt Engineering Guidelines</li>
+<li>Google AI Best Practices – Prompt Design</li>
+<li>Anthropic Prompt Engineering Guide</li>
+<li>Wei et al., 2022 – Chain-of-Thought Prompting</li>
+<li>Liu et al., 2023 – Pre-train, Prompt, and Predict Paradigm</li>
+</ul>
+</section>
 </main>
-
-<footer class="footer">
-    <p>© 2026 Prompt Engineering – Курсова работа</p>
+<button id="top-button" class="top-button" type="button" aria-label="Върни се горе">⮝</button>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>Курсов проект по Изкуствен интелект — Prompt Engineering</p>
+</div>
 </footer>
-
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+const topButton = document.getElementById('top-button');
+const siteHeader = document.querySelector('.site-header');
+const pageBody = document.body;
+const themeKey = 'promptThemePreference';
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    pageBody.classList.add('dark-theme');
+    themeToggle.textContent = 'Светла тема';
+  } else {
+    pageBody.classList.remove('dark-theme');
+    themeToggle.textContent = 'Тъмен режим';
+  }
+}
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = pageBody.classList.contains('dark-theme') ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem(themeKey, nextTheme);
+  });
+}
+if (topButton) {
+  topButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+window.addEventListener('scroll', () => {
+  if (siteHeader) {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  }
+  if (!topButton) return;
+  if (window.scrollY > 400) {
+    topButton.classList.add('visible');
+  } else {
+    topButton.classList.remove('visible');
+  }
+});
+const savedTheme = localStorage.getItem(themeKey);
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+</script>
 </body>
 </html>
