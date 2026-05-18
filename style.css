@@ -1,6 +1,173 @@
 body {
-    background: #222;
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #f7f8fc;
+    color: #111827;
+    line-height: 1.7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.site-header {
+    background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
     color: white;
+    padding: 28px 0;
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    opacity: 0.85;
+    font-size: 0.85rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 2.8vw, 3rem);
+}
+
+.subtitle {
+    margin: 12px 0 0;
+    max-width: 620px;
+    font-size: 1.05rem;
+    opacity: 0.92;
+}
+
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+    background: rgba(255,255,255,0.16);
+    transform: translateY(-1px);
+}
+
+main {
+    padding: 36px 0 48px;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.concept-list,
+ul {
+    margin: 16px 0 0;
+    padding-left: 20px;
+}
+
+.concept-list li,
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.diagram {
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+.example-block {
+    display: grid;
+    gap: 20px;
+    margin: 22px 0;
+}
+
+.example-block div {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+thead th {
+    background: #eff6ff;
+    color: #1e3a8a;
+    padding: 14px;
+    text-align: left;
+    border-bottom: 2px solid #dbeafe;
+}
+
+tbody td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.grid-2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.site-footer {
+    padding: 16px 0 24px;
     text-align: center;
-    font-family: Arial;
+    color: #475569;
+}
+
+@media (max-width: 800px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 580px) {
+    .top-nav {
+        justify-content: flex-start;
+    }
+
+    .top-nav a {
+        padding: 10px 12px;
+    }
 }
