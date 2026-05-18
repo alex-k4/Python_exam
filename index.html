@@ -15,9 +15,11 @@
 <p class="subtitle">Как правилно зададеният въпрос води до по-добър и по-точен AI отговор</p>
 <p class="author">Алекс Корабова, Софтуерно инженерство, 3 курс</p>
 </div>
+<div class="header-controls">
 <nav class="main-nav" aria-label="Основна навигация">
 <a href="#intro">Увод</a>
 <a href="#concepts">Основни понятия</a>
+<a href="#visuals">Инфографика</a>
 <a href="#examples">Примери</a>
 <a href="#advantages">Предимства</a>
 <a href="#limitations">Ограничения</a>
@@ -25,14 +27,16 @@
 <a href="#sources">Източници</a>
 </nav>
 </div>
+<button id="theme-toggle" class="theme-toggle" type="button">Тъмен режим</button>
+</div>
 </header>
 <main class="container">
 <section class="hero section-card">
 <div class="hero-grid">
 <div class="hero-copy">
 <p class="eyebrow">Въведение</p>
-<h2>Добрият prompt е разликата между общ отговор и полезен резултат.</h2>
-<p>Prompt engineering е дисциплина, която учи как да формулираме заявки към AI така, че моделът да разбира контекста, целта и формата на отговора. Това позволява по-добра точност, по-малко шум и по-малко време за корекции.</p>
+<h2>Добрият prompt е разликата между обобщен отговор и полезен резултат.</h2>
+<p>Prompt engineering ни учи как да формулираме заявки към AI така, че моделът да разбира контекста, целта и формата на отговора. Това позволява по-добра точност, по-малко шум и по-малко време за корекции.</p>
 <a class="button primary" href="#concepts">Научете повече</a>
 </div>
 <div class="hero-panel">
@@ -78,6 +82,39 @@
 <h3>Пример за прост vs. структуриран prompt</h3>
 <p><strong>Слаб prompt:</strong> "Напиши нещо за изкуствен интелект."</p>
 <p><strong>Добър prompt:</strong> "Действай като учител по информатика. Обясни в три точки как prompt engineering подобрява AI отговорите, използвай кратки примери."</p>
+</div>
+</section>
+<section id="visuals" class="section-card">
+<h2>Инфографика</h2>
+<p>Тук са визуализации, които илюстрират различни елементи от prompt engineering: рецептата за prompt и ключовите понятия.</p>
+<div class="visual-grid">
+<div class="visual-card">
+<h3>Prompt рецепта</h3>
+<div class="diagram prompt-diagram">
+<div class="diagram-header">Prompt Recipe</div>
+<div class="diagram-row">
+<div class="diagram-node">Role</div>
+<div class="diagram-node">Task</div>
+</div>
+<div class="diagram-row">
+<div class="diagram-node">Instructions</div>
+<div class="diagram-node">Context</div>
+</div>
+<div class="diagram-row">
+<div class="diagram-node wide">Input</div>
+</div>
+</div>
+</div>
+<div class="visual-card">
+<h3>Ключови концепции</h3>
+<div class="diagram concepts-diagram">
+<div class="diagram-center">Prompt Engineering</div>
+<div class="diagram-circle circle-top">Token</div>
+<div class="diagram-circle circle-right">Fine-Tuning</div>
+<div class="diagram-circle circle-bottom">Priming</div>
+<div class="diagram-circle circle-left">Context</div>
+</div>
+</div>
 </div>
 </section>
 <section id="examples" class="section-card">
@@ -164,10 +201,64 @@
 </ul>
 </section>
 </main>
+<button id="top-button" class="top-button" type="button" aria-label="Върни се горе">⮝</button>
 <footer class="site-footer">
 <div class="container footer-inner">
 <p>Курсов проект по Prompt Engineering</p>
 </div>
 </footer>
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+const topButton = document.getElementById('top-button');
+const pageBody = document.body;
+const themeKey = 'promptThemePreference';
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    pageBody.classList.add('dark-theme');
+    themeToggle.textContent = 'Светла тема';
+  } else {
+    pageBody.classList.remove('dark-theme');
+    themeToggle.textContent = 'Тъмен режим';
+  }
+}
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = pageBody.classList.contains('dark-theme') ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem(themeKey, nextTheme);
+  });
+}
+if (topButton) {
+  topButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+window.addEventListener('scroll', () => {
+  if (!topButton) return;
+  topButton.classList.toggle('visible', window.scrollY > 360);
+});
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+const headerHeight = document.querySelector('.site-header').offsetHeight || 100;
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: 'smooth' });
+    window.history.pushState(null, '', `#${targetId}`);
+  });
+});
+if (window.location.hash) {
+  const initialTarget = document.getElementById(window.location.hash.slice(1));
+  if (initialTarget) {
+    const top = initialTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+const savedTheme = localStorage.getItem(themeKey);
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+</script>
 </body>
 </html>
