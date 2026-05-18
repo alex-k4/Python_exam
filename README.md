@@ -31,7 +31,7 @@ Prompt Engineering показва, че:
 - CSS3
 - Vanilla JavaScript
 
-## 🎨 Функционалности
+## Функционалности
 
 -  Responsive layout (работи на телефон и PC)
 -  Dark / Light режим
