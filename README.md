@@ -1,4 +1,4 @@
-# Prompt Engineering – Курсова работа (AI Project)
+# Prompt Engineering 
 
 ## Описание на проекта
 
@@ -33,10 +33,10 @@ Prompt Engineering показва, че:
 
 ## Функционалности
 
--  Responsive layout (работи на телефон и PC)
+-  Responsive layout 
 -  Dark / Light режим
 -  Scroll-to-top бутон
 -  Smooth navigation между секции
--  Инфографики и таблици
+-  Графики и таблици
 -  Навигационно меню
--  Образователно структурирано съдържание
+-  Структурирано съдържание
