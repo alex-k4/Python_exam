@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Engineering – Как правилно зададеният въпрос води до по-добър AI отговор</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<div class="brand">
+<p class="eyebrow">Курсова работа по изкуствен интелект</p>
+<h1>Prompt Engineering</h1>
+<p class="subtitle">Как правилно зададеният въпрос води до по-добър и по-точен AI отговор</p>
+<p class="author">Алекс Корабова, Софтуерно инженерство, 3 курс</p>
+</div>
+<div class="header-controls">
+<nav class="main-nav" aria-label="Основна навигация">
+<a href="#intro">Увод</a>
+<a href="#concepts">Основни понятия</a>
+<a href="#visuals">Графики</a>
+<a href="#examples">Приложения</a>
+<a href="#advantages">Предимства</a>
+<a href="#limitations">Ограничения</a>
+<a href="#conclusion">Заключение</a>
+<a href="#sources">Източници</a>
+</nav>
+</div>
+<button id="theme-toggle" class="theme-toggle" type="button">Тъмен режим</button>
+</div>
+</header>
+<main class="container">
+<section class="hero section-card">
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">Въведение</p>
+<h2>Добрият prompt прави разликата между обобщен отговор и очакван резултат.</h2>
+<p>Prompt engineering ни учи как да формулираме заявки към AI така, че моделът да разбира контекста, целта и формата на отговора. Това позволява по-добра точност, по-малко халюцинации и по-малко време за корекции.</p>
+<a class="button primary" href="#concepts">Научете повече</a>
+</div>
+<div class="hero-panel">
+<div class="hero-card">
+<h3>Какво ще намерите тук</h3>
+<ul>
+<li>Какво е prompt engineering</li>
+<li>Как работят AI моделите</li>
+<li>Примери и практики</li>
+<li>Предимства и ограничения</li>
+<li>Приложения</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="intro" class="section-card">
+<h2>Увод</h2>
+<p>Изкуственият интелект става все по-важна част от ежедневието, образованието и професионалната работа. Въпреки че съвременните AI системи могат да генерират текст, код, изображения и анализи, качеството на техните резултати зависи силно от начина, по който потребителят формулира своята заявка. Prompt engineering представлява умението да се създават ясни и добре структурирани инструкции, които водят до по-точни, полезни и надеждни AI отговори.</p>
+<p>Въпреки високите възможности на съвременните AI модели, качеството на техните отговори не зависи единствено от технологията. От съществено значение е начинът, по който човек задава въпроса или описва задачата. Един неясен или прекалено общ prompt често води до неточни, повърхностни или неподходящи резултати. От друга страна, добре формулираната инструкция позволява на AI системата да разбере контекста, целта и очакванията на потребителя.
+
+Именно тук се появява понятието Prompt Engineering.</p>
+</section>
+<section id="intro" class="section-card">
+<h2>Какво е prompt engineering</h2>
+<p>Prompt engineering представлява процесът на насочване на генеративните системи с изкуствен интелект към създаване на желаните резултати. Въпреки че генеративният AI се стреми да имитира човешкото общуване и мислене, той се нуждае от ясни и подробни инструкции, за да генерира качествено и релевантно съдържание. При prompt engineering се подбират най-подходящите формати, фрази, думи и символи, които насочват AI системата към по-смислено и ефективно взаимодействие с потребителите. Prompt инженерите използват както креативност, така и подход на проба и грешка, за да създадат набор от входни инструкции, чрез които генеративният AI работи по очаквания начин.</p>
+
+</section>
+<section id="concepts" class="section-card">
+
+<h2>Основни понятия</h2>
+<div class="info-grid">
+<div>
+<h3>Prompt</h3>
+<p>Prompt е инструкция, заявка или въпрос, който подаваме на AI модел. Той описва каква информация искаме, в каква форма и за кого.</p>
+</div>
+<div>
+<h3>Контекст</h3>
+<p>Контекстът съдържа важни допълнителни детайли: ролята на модела (в ролята си на какво пише текста), аудиторията, за която е предназначен, тона, който се очаква и ограничения. Без контекст моделът може да генерира общ или неточен отговор.</p>
+</div>
+<div>
+<h3>Структура</h3>
+<p>Добрият prompt има ясна структура: роля, задача, изисквания и формат. Това намалява двусмислията и подобрява точността.</p>
+</div>
+<div>
+<h3>AI модел</h3>
+<p>Моделите като GPT работят чрез предсказване на следващата дума, а не чрез истинско разбиране. Затова колкото по-ясен е входът, толкова по-правилно се насочва генерацията.</p>
+</div>
+</div>
+<div class="example-box">
+<h3>Примери</h3>
+<p><strong>Слаб prompt:</strong> "Напиши нещо за виртуалната комуникация."</p>
+<p><strong>Добър prompt:</strong> "Действай като учител по комуникативни умения. Обясни ми в първо какво е виртуална комуникация, какви са нейните предимства и недостатъци и ми напиши три аргумента в полза на това, че виртуалната комуникация създава социална дистанция между хората."</p>
+</div>
+</section>
+<section id="visuals" class="section-card">
+<h2>Графики</h2>
+<p>Ключови концепции</p>
+<div class="visual-grid">
+<div class="visual-card">
+<h3>5-те основни теоретични стълба</h3>
+<img src="photos/shema1.jpg" alt="Схема за prompt рецепта" class="visual-image">
+</div>
+<div class="visual-card">
+<h3>Какво съдържа правилният prompt</h3>
+<img src="photos/shema2.jpg" alt="Схема за ключови концепции" class="visual-image">
+</div>
+</div>
+</section>
+<section id="examples" class="section-card">
+<h2>Приложения</h2>
+<div class="feature-grid">
+<article>
+<h3>Образование</h3>
+<p>Учители и ученици използват prompt engineering за създаване на планове на уроци, обяснения, упражнения и резюмета, адаптирани към конкретно ниво.</p>
+</article>
+<article>
+<h3>Бизнес</h3>
+<p>Презентации, маркетингови текстове и анализи стават по-ефективни, когато prompt-ът описва целта, аудиторията и стила.</p>
+</article>
+<article>
+<h3>Програмиране</h3>
+<p>При генериране на код или отстраняване на грешки prompt-ът трябва да съдържа контекст за език, среда и конкретни изисквания.</p>
+</article>
+<article>
+<h3>Професионална работа</h3>
+<p>В научни изследвания и консултантска практика AI може да помага с анализи, обобщения и отчетни документи, ако prompt-ът е структуриран.</p>
+</article>
+</div>
+<div class="prompt-list">
+<h3>Компоненти</h3>
+<table class="prompt-table">
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Роля</td>
+<td>Кой трябва да бъде моделът</td>
+<td>Act as a product manager.</td>
+</tr>
+<tr>
+<td>Задача</td>
+<td>Какво трябва да направи</td>
+<td>Summarize the key benefits of prompt engineering.</td>
+</tr>
+<tr>
+<td>Изисквания</td>
+<td>Формат и тон</td>
+<td>Three bullet points, simple language.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="advantages" class="section-card">
+<h2>Предимства</h2>
+<ul>
+<li>По-ясни резултати и по-малко двусмисленост</li>
+<li>По-бързо достигане до желания формат</li>
+<li>По-малко време за редакции и корекции</li>
+<li>По-добър контрол върху стила и тона</li>
+</ul>
+</section>
+<section id="limitations" class="section-card">
+<h2>Ограничения</h2>
+<ul>
+<li>AI моделите могат да създават неточна информация, дори при добър prompt</li>
+<li>Не винаги има един единствен правилен prompt</li>
+<li>Трябва да се проверява информацията от външни източници</li>
+<li>Prompt engineering не заменя експертиза, а я допълва</li>
+</ul>
+</section>
+<section id="conclusion" class="section-card">
+<h2>Заключение</h2>
+<p>Prompt engineering е умението да се формулира точно и ясно заявка към AI. То позволява да извлечете по-полезен, по-точен и по-контролиран резултат от моделите.</p>
+<p>Когато зададете правилен prompt, вие задавате рамка, контекст и очаквания. Това е основният фактор за качествен AI отговор.</p>
+</section>
+<section id="sources" class="section-card">
+<h2>Източници</h2>
+<ul class="sources-list">
+<li>OpenAI Documentation – Prompt Design Best Practices</li>
+<li>Google AI – Responsible AI and prompt guidance</li>
+<li>Anthropic – Prompting and model alignment</li>
+<li>Wei et al., 2022 – Chain-of-Thought Prompting</li>
+<li>Liu et al., 2023 – Pre-train, Prompt, and Predict</li>
+</ul>
+</section>
+</main>
+<button id="top-button" class="top-button" type="button" aria-label="Върни се горе">⮝</button>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>Курсов проект по Prompt Engineering</p>
+</div>
+</footer>
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+const topButton = document.getElementById('top-button');
+const pageBody = document.body;
+const themeKey = 'promptThemePreference';
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    pageBody.classList.add('dark-theme');
+    themeToggle.textContent = 'Светла тема';
+  } else {
+    pageBody.classList.remove('dark-theme');
+    themeToggle.textContent = 'Тъмен режим';
+  }
+}
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = pageBody.classList.contains('dark-theme') ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem(themeKey, nextTheme);
+  });
+}
+if (topButton) {
+  topButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+window.addEventListener('scroll', () => {
+  if (!topButton) return;
+  topButton.classList.toggle('visible', window.scrollY > 360);
+});
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+const headerHeight = document.querySelector('.site-header').offsetHeight || 100;
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: 'smooth' });
+    window.history.pushState(null, '', `#${targetId}`);
+  });
+});
+if (window.location.hash) {
+  const initialTarget = document.getElementById(window.location.hash.slice(1));
+  if (initialTarget) {
+    const top = initialTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+const savedTheme = localStorage.getItem(themeKey);
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+</script>
+</body>
+</html>
