@@ -1,4 +1,4 @@
-# Prompt Engineering – Курсова работа (AI Project)
+# Prompt Engineering 
 
 ## Описание на проекта
 
